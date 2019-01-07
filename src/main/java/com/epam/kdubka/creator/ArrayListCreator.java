@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class ArrayListCreator {
     public ArrayList<Float> readFile() {
         ArrayList<Float> numbers = new ArrayList<>();
-//        FileValidator validate = new FileValidator();
+        FileValidator linesValidator = new FileValidator();
         String filePath = "/test.txt";
         BufferedReader buff = null;
         String[] stringHolder;
@@ -23,10 +23,16 @@ public class ArrayListCreator {
         String line = null;
         try {
             while ((line = buff.readLine()) != null) {
-                stringHolder = line.split("[#$%а-яА-Яa-zA-Z@^&?!,:();{}.*~<>\\s]+");
-                for (String strings : stringHolder) {
-                    numbers.add(Float.parseFloat(strings));
+                boolean result = linesValidator.validate(line);
+                if (result == true){
+                    stringHolder = line.split(" ");
+                    for (String strings: stringHolder) {
+                        numbers.add(Float.parseFloat(strings));
+
+                    }
                 }
+
+
 
             }
         } catch (IOException e) {
