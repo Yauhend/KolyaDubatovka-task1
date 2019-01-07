@@ -2,18 +2,25 @@ package com.epam.kdubka.main;
 
 
 import com.epam.kdubka.func.Actions;
-import com.epam.kdubka.reader.FileReader;
+import com.epam.kdubka.creator.ArrayListCreator;
 
 import java.util.ArrayList;
 
- class Test {
+class Test {
     public static void main(String[] args) {
-        FileReader sc = new FileReader();
-        ArrayList<Float> numbers = sc.reader();
+        ArrayListCreator scann = new ArrayListCreator();
+        ArrayList<Float> numbers = scann.readFile();
         Actions act = new Actions();
         act.sort(numbers);
-        act.min(numbers);
-        act.max(numbers);
-        act.middle(numbers);
+
+        float minValue = act.getMin(numbers);
+        float maxValue = act.getMax(numbers);
+        float middleValue = act.getMiddle(numbers);
+        System.out.println(numbers);
+        System.out.println("min value is " + minValue);
+        System.out.println("max value is " + maxValue);
+        System.out.println("middle value is " + middleValue);
+
+
     }
 }
