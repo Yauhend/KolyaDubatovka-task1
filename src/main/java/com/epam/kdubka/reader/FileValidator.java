@@ -5,17 +5,18 @@ import java.util.ArrayList;
 
 public class FileValidator {
 
-    public ArrayList<Float> validator(String Directory, ArrayList<Float> list)  {
+    public ArrayList<Float> validator(String Directory)  {
+        ArrayList<Float> list = new ArrayList<>();
         BufferedReader buff = null;
         String [] stringholder;
 
         try {
-            buff = new BufferedReader(new InputStreamReader(new FileInputStream(getClass().getResource("test.txt").getFile())));
+            buff = new BufferedReader(new InputStreamReader(new FileInputStream(getClass().getResource(Directory).getFile())));
         } catch (FileNotFoundException e) {
             System.out.println("Не удается найти файл " + Directory);
             e.printStackTrace();
         }catch (NullPointerException e){
-            System.out.println("Null catched ");
+            System.out.println("Null catched");
         }
         String line = null;
 

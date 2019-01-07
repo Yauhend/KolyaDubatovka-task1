@@ -6,16 +6,14 @@ import com.epam.kdubka.reader.FileReader;
 
 import java.util.ArrayList;
 
-public class test {
+ class Test {
     public static void main(String[] args) {
-        ArrayList<Float> numbers = new ArrayList<>();
-        String path = "test";
         FileReader sc = new FileReader();
-        sc.reader(numbers, path);
+        ArrayList<Float> numbers = sc.reader();
         Actions act = new Actions();
-        act.sort(numbers, path);
-        act.min(numbers, path);
-        act.max(numbers, path);
-        act.middle(numbers, path);
+        act.sort(numbers);
+        act.min(numbers);
+        act.max(numbers);
+        act.middle(numbers);
     }
 }
