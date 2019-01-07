@@ -10,7 +10,7 @@ public class FileValidator {
         String [] stringholder;
 
         try {
-            buff = new BufferedReader(new InputStreamReader(new FileInputStream(getClass().getResource(Directory).getFile())));
+            buff = new BufferedReader(new InputStreamReader(new FileInputStream(getClass().getResource("test.txt").getFile())));
         } catch (FileNotFoundException e) {
             System.out.println("Не удается найти файл " + Directory);
             e.printStackTrace();
