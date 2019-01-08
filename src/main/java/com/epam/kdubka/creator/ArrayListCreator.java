@@ -22,7 +22,7 @@ public class ArrayListCreator {
         }
         String line = null;
         try {
-            while ((line = buff.readLine()) != null) {
+            while ((line = buff.readLine()) != null) {//вот тут что-то с чем-то :)
                 boolean result = linesValidator.validate(line);
                 if (result == true){
                     stringHolder = line.split(" ");
