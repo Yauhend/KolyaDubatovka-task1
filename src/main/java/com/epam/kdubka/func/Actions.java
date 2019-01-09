@@ -3,7 +3,7 @@ package com.epam.kdubka.func;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Actions {
+public class ActionService {
     public void sort(ArrayList<Float> list) {
         System.out.println("\nСортировка массива ");
         Collections.sort(list);
