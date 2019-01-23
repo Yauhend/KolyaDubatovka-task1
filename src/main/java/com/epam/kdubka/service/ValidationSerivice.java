@@ -6,7 +6,7 @@ public class ValidationSerivice {
 
     public ArrayList<Float> validate(String line) {
         String[] stringsHolder = line.split("\\s");
-        ArrayList<Float> smth = new ArrayList<>(0);
+        ArrayList<Float> emptyList = new ArrayList<>(0);
         ArrayList<Float> numbers = new ArrayList<>(stringsHolder.length);
         try {
             for (String element : stringsHolder) {
@@ -15,7 +15,7 @@ public class ValidationSerivice {
             return numbers;
         } catch (NumberFormatException e) {
             System.out.println("invalid line is" + line);
-            return smth;
+            return emptyList;
         }
     }
 }
