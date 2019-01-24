@@ -6,7 +6,6 @@ public class ValidationSerivice {
 
     public boolean validate(String line) {
         String[] stringsHolder = line.split("\\s");
-        ArrayList<Float> emptyList = new ArrayList<>(0);
         ArrayList<Float> numbers = new ArrayList<>(stringsHolder.length);
         try {
             for (String element : stringsHolder) {
