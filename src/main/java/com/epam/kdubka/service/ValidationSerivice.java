@@ -12,10 +12,10 @@ public class ValidationSerivice {
             for (String element : stringsHolder) {
                 numbers.add(Float.parseFloat(element));
             }
-            return numbers;
+            return true;
         } catch (NumberFormatException e) {
             System.out.println("invalid line is" + line);
-            return emptyList;
+            return false;
         }
     }
 }
