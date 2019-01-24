@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ValidationSerivice {
 
-    public ArrayList<Float> validate(String line) {
+    public boolean validate(String line) {
         String[] stringsHolder = line.split("\\s");
         ArrayList<Float> emptyList = new ArrayList<>(0);
         ArrayList<Float> numbers = new ArrayList<>(stringsHolder.length);
