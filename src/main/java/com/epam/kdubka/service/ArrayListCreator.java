@@ -36,7 +36,7 @@ public class ArrayListCreator {
                 try {
                     buff.close();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    e.getCause(e);
                 }
             }
         }
