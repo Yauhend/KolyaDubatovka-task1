@@ -1,10 +1,8 @@
 package com.epam.kdubka.main;
 
-
 import com.epam.kdubka.service.ActionService;
 import com.epam.kdubka.service.ArrayListCreator;
 import com.epam.kdubka.service.MergeSort;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 

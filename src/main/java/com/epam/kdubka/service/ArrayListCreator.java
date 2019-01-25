@@ -7,7 +7,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.io.IOException;
 
-
 public class ArrayListCreator {
     public ArrayList<Float> readFile(String directory) {
         ArrayList<Float> numbers = new ArrayList<>();
@@ -21,7 +20,6 @@ public class ArrayListCreator {
 
 
             }
-
 
         } catch (FileNotFoundException e) {
             System.out.println("catched " + e);

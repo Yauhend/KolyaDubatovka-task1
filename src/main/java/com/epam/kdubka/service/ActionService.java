@@ -2,7 +2,6 @@ package com.epam.kdubka.service;
 
 import java.util.ArrayList;
 
-
 public class ActionService {
     public float getMin(ArrayList<Float> list) {
         try {
