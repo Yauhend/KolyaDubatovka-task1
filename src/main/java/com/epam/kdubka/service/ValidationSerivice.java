@@ -6,15 +6,16 @@ public class ValidationSerivice {
 
     public boolean validate(String line) {
         String[] stringsHolder = line.split("\\s");
+        ArrayList<Float> emptyList = new Arraylist<>();
         ArrayList<Float> numbers = new ArrayList<>(stringsHolder.length);
         try {
             for (String element : stringsHolder) {
                 numbers.add(Float.parseFloat(element));
             }
-            return true;
+            return numbers;
         } catch (NumberFormatException e) {
             System.out.println("invalid line is" + line);
-            return false;
+            return emptyList;
         }
     }
 }
