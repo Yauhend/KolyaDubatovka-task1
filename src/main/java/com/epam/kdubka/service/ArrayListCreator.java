@@ -17,7 +17,10 @@ public class ArrayListCreator {
             buff = new BufferedReader(new InputStreamReader(new FileInputStream(getClass().getResource(directory).getFile())));
             String line;
             while ((line = buff.readLine()) != null) {
-                numbers.addAll(linesValidator.validate(line));
+                boolean isLineValid = linesValidator.validate(line);
+                if (isLineValid){
+                numbers.parseFloat(line);
+                }
             }
 
 
@@ -33,7 +36,7 @@ public class ArrayListCreator {
                 try {
                     buff.close();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    e.getCause(e);
                 }
             }
         }
