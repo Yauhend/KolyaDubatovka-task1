@@ -17,12 +17,10 @@ public class ArrayListCreator {
             buff = new BufferedReader(new InputStreamReader(new FileInputStream(getClass().getResource(directory).getFile())));
             String line;
             while ((line = buff.readLine()) != null) {
-                boolean isLineValid = linesValidator.validate(line);
-                if (isLineValid){
-                numbers.parseFloat(line);
-                }
-            }
+                numbers.addAll(linesValidator.validate(line));
 
+
+            }
 
 
         } catch (FileNotFoundException e) {
@@ -31,12 +29,12 @@ public class ArrayListCreator {
             System.out.println("catched " + e);
         } catch (IOException e) {
             System.out.println("catched " + e);
-        }finally {
+        } finally {
             if (buff != null) {
                 try {
                     buff.close();
                 } catch (IOException e) {
-                    e.getCause(e);
+                    System.out.println("catched " + e);
                 }
             }
         }

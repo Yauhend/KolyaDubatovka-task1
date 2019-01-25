@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class ValidationSerivice {
 
-    public boolean validate(String line) {
+    public ArrayList<Float> validate(String line) {
         String[] stringsHolder = line.split("\\s");
-        ArrayList<Float> emptyList = new Arraylist<>();
+        ArrayList<Float> emptyList = new ArrayList<>();
         ArrayList<Float> numbers = new ArrayList<>(stringsHolder.length);
         try {
             for (String element : stringsHolder) {
