@@ -14,14 +14,12 @@ class Application {
         MergeSort sorter = new MergeSort();
         ArrayList<Float> numbers = creator.readFile(filePath);
         System.out.println("Created list is "+ numbers);
-        System.out.println("Sorted list is " + Arrays.toString((sorter.sort(numbers))));
+        System.out.println("Sorted list is " + Arrays.toString(sorter.sort(numbers)));
         float minValue = action.getMin(numbers);
         float maxValue = action.getMax(numbers);
         float middleValue = action.getMiddle(numbers);
         System.out.println("min value is " + minValue);
         System.out.println("max value is " + maxValue);
         System.out.println("middle value is " + middleValue);
-
-
     }
 }
